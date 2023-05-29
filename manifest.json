@@ -16,5 +16,13 @@
         "https://developer.chrome.com/docs/webstore/*"
       ]
     }
-  ]
+  ],
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ],
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": true
+  }
 }
