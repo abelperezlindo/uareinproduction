@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Be careful, you are in production!",
+  "description": "Add an alert message when you enter the production version",
+  "version": "1.0",
+  "icons": {
+    "one": "images/icon-one.png",
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
+}
