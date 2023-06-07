@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla Select</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    function agregarFila() {
+      var tabla = document.getElementById("tabla");
+      var fila = tabla.insertRow(-1);
+      var celda = fila.insertCell(0);
+      celda.innerHTML = "<input type='checkbox'>";
+      celda = fila.insertCell(1);
+      celda.innerHTML = "<input type='text'>";
+    }
+
+    function eliminarFilas() {
+      var tabla = document.getElementById("tabla");
+      var filas = tabla.getElementsByTagName("tr");
+      
+      // Iterar en reversa para evitar problemas con los índices
+      for (var i = filas.length - 1; i >= 0; i--) {
+        var fila = filas[i];
+        var checkbox = fila.getElementsByTagName("input")[0];
+        
+        if (checkbox.checked) {
+          tabla.deleteRow(i);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Tabla Select</h1>
+  <table id="tabla">
+    <tr>
+      <th>Seleccionar</th>
+      <th>Elemento</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+  </table>
+  <br>
+  <button onclick="agregarFila()">Agregar Fila</button>
+  <button onclick="eliminarFilas()">Eliminar Filas</button>
+</body>
+</html>
