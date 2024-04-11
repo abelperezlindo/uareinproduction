@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configuración</title>
-  </head>
-  <body>
-    <form id="popup-form">
-      <label for="texto">Texto:</label><br>
-      <input type="text" id="texto" name="texto"><br><br>
-      <input type="submit" value="Enviar">
-  </form>
-    <p> Aca puede agregar un nuevo sitio.</p>
-  </body>
-  <script src="popups.js"></script>
+</head>
+<body style="min-width: 600px; min-height: 60px;">
+  <main class="container">
+    <h3>Configuración</h3>
+    <section>
+      <form>
+        <div class="form-group">
+          <label for="new-domain">Nuevo sitio:</label>
+          <input type="text" name="new-domain" title="Add a new web site.">
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="checkbox" value="1">
+          <label for="checkbox">Aplicar en todos los subdominios</label>
+        </div>
+        <div class="form-action">
+          <button name="add" onclick="addNewSite()">Agregar</button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <h3>Sitios agregados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sitio</th>
+            <th>subdominios</th>
+            <th>Op</th>
+          </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>text1.1</td>
+             <td>text1.2</td>
+             <td>text1.3</td>
+           </tr>
+           <tr>
+             <td>text2.1</td>
+             <td>text2.2</td>
+             <td>text2.3</td>
+           </tr>
+           <tr>
+             <td>text3.1</td>
+             <td>text3.2</td>
+             <td>text3.3</td>
+           </tr>
+           <tr>
+           </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+<script src="options.js"></script>
 </html>

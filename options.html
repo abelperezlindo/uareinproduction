@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
   <title>Configuración</title>
   <meta http-equiv="content-type" content="text/html; utf-8">
   <meta charset="UTF-8">
 </head>
 <body>
-  <h1>Configuración</h1>
-
-  <form id="configForm">
-    <label for="textArea">Listado de urls:</label><br>
-    <textarea id="list-urls" name="list-urls" rows="4" cols="50"></textarea><br>
-
-    <input type="submit" value="Guardar">
-  </form>
-
-  <script src="options.js"></script>
+  <main class="container">
+    <h3>Configuración</h3>
+    <section>
+      <form>
+        <div class="form-group">
+          <label for="new-domain">Nuevo sitio:</label>
+          <input type="text" name="new-domain" title="Add a new web site.">
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="checkbox" value="1">
+          <label for="checkbox">Aplicar en todos los subdominios</label>
+        </div>
+        <div class="form-action">
+          <button name="add" onclick="addNewSite()">Agregar</button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <h3>Sitios agregados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sitio</th>
+            <th>subdominios</th>
+            <th>Op</th>
+          </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>text1.1</td>
+             <td>text1.2</td>
+             <td>text1.3</td>
+           </tr>
+           <tr>
+             <td>text2.1</td>
+             <td>text2.2</td>
+             <td>text2.3</td>
+           </tr>
+           <tr>
+             <td>text3.1</td>
+             <td>text3.2</td>
+             <td>text3.3</td>
+           </tr>
+           <tr>
+           </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 </body>
+<script src="options.js"></script>
 </html>
