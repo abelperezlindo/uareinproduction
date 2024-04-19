@@ -13,9 +13,14 @@
   },
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "webNavigation",
+    "notifications"
   ],
   "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html"
+  },
   "action": {
     "default_title": "Click Me",
     "default_popup": "popup.html"
