@@ -14,12 +14,14 @@
   "permissions": [
     "tabs",
     "storage",
-    "webNavigation",
-    "notifications"
+    "activeTab",
+    "notifications",
+    "management"
   ],
   "options_page": "options.html",
   "options_ui": {
-    "page": "options.html"
+    "page": "options.html",
+    "open_in_tab": false
   },
   "action": {
     "default_title": "Click Me",
